@@ -24,24 +24,17 @@ const Slides = () => {
         }
     ];
 
-    // const nextSlide = () =>{
-    //     setActiveSlide((prev)=>
-    //         (prev+1) % slides.length
-    //     )
-    // }
-    // const prevSlide = () =>{
-    //     setActiveSlide((prev)=>
-    //         (prev-1 + slides.length) % slides.length
-    //     )
-    // }
-    const nextSlide = () => {
-        setActiveSlide((prev) => (prev + 1) % slides.length);
-      };
-      
-      const prevSlide = () => {
-        setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
-      };
-      
+    const nextSlide = () =>{
+        setActiveSlide((prev)=>
+            (prev+1) % slides.length
+        )
+    }
+    const prevSlide = () =>{
+        setActiveSlide((prev)=>
+            (prev-1 + slides.length) % slides.length
+        )
+    }
+
     
   return (
     <div className='w-100 relative'>

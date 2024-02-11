@@ -8,7 +8,7 @@ const Banner = ({bannerImg, bannerTitle, bannerDesc, bannerBg, bannerLink,cl}) =
                     <img src={bannerImg} alt="Banner image 1" className='height-[50vh]'/>
                 </div>
                 <div className = {`rightShade ${bannerBg} w-[50%] flex flex-col justify-end	 py-7 px-5`}>
-                    <p className='py-4'>{bannerDesc}</p>
+                    <p className='py-4 fontBold text-banner font-semibold'>{bannerDesc}</p>
                     <a href={bannerLink} className='bannerBtn w-[30%] text-center'>SHOP NOW</a>
                 </div>
             </div>    
