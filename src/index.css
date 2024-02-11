@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Font inititalise*/
+@font-face {
+  font-family: "AvantGardeBold";
+  src: url('../public/fonts/AvantGardeBold.ttf');
+}
+@font-face {
+  font-family: "AvantGardeMedium";
+  src: url('../public/fonts/AvantGardeMedium.otf');
+}
+
+
+

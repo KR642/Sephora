@@ -1,0 +1,20 @@
+/*Global css*/
+.bannerBtn{
+    @apply bg-white text-banner p-2 px-6 font-fontBold rounded-lg;
+}
+.normalBtn{
+    @apply bg-black text-banner p-2 px-6 font-fontBold rounded-lg;
+}
+a{
+    text-decoration: none;
+}
+/*Custom CSS Modifications*/
+input#searchtxt{
+    outline: none;
+}
+.slide{
+    display: none;
+}
+.active {
+    display: flex;
+  }

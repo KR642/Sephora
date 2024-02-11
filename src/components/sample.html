@@ -1,0 +1,94 @@
+<div class="div-zone" id="main-container">
+    <div class="slide-div">
+      <div class="slide active">
+        <p>1st Slide</p>
+        <span class="slide-heading">This is a slide</span><p>This is slide 1</p>
+    </div>
+    <div class="slide"><p>2nd Slide</p>This is another slide</div>
+      <div class="slide"><p>3rd Slide</p><span class="slide-heading">Third Slide</span><p>Super easy to add content</p></div>
+  </div>
+    <div class="slide-controls"><button class="slide-button" id="previous">Previous</button>
+      <button class="slide-button" id="next">Next</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+
+const Banner = ({bannerImg, bannerTitle, bannerDesc, bannerBg, bannerLink}) => {
+  return (
+    <div className='w-100'>
+        <div className='slides'>
+            <div className='firstSlide active flex flex-row relative' id='parentSlide'>
+                <h1 className='text-[50px] absolute text-white fontBold w-[25%] left-[40%] top-[20%] font-bold'>{bannerTitle}</h1>
+                <div className='leftImg w-[50%]'>
+                    <img src={bannerImg} alt="Banner image 1" className='height-[50vh]'/>
+                </div>
+                <div className = {`rightShade ${bannerBg} w-[60%] flex flex-col justify-end	 py-7 px-5`}>
+                    <p className='py-4'>{bannerDesc}</p>
+                    <a href={bannerLink} className='bannerBtn w-[30%] text-center'>SHOP NOW</a>
+                </div>
+            </div>
+            <div className='secondSlide flex flex-row relative' id='parentSlide'>
+                <h1 className='text-[50px] absolute text-white fontBold w-[25%] left-[40%] top-[20%] font-bold'>{bannerTitle}</h1>
+                <div className='leftImg w-[50%]'>
+                    <img src={bannerImg} alt="Banner image 1" className='height-[50vh]'/>
+                </div>
+                <div className = {`rightShade ${bannerBg} w-[60%] flex flex-col justify-end	 py-7 px-5`}>
+                    <p className='py-4'>{bannerDesc}</p>
+                    <a href={bannerLink} className='bannerBtn w-[30%] text-center'>SHOP NOW</a>
+                </div>
+            </div>
+            
+        </div>
+        <div className='slideControl'>
+
+        </div>
+    </div>
+  )
+}
+
+export default Banner
+
+
+
+
+var allSlides = $('.slide');
+var activeSlide = 0;
+$("#next").click(function() {
+  if (activeSlide+1 >= allSlides.length) {
+    allSlides.eq(activeSlide).removeClass("active");
+    activeSlide = 0;
+  allSlides.eq(0).addClass("active");
+  }
+  else {
+    allSlides.eq(activeSlide).removeClass("active");
+    activeSlide++;
+    allSlides.eq(activeSlide).addClass("active");
+  }
+});
+$("#previous").click(function() {
+  if (activeSlide-1 < 0) {
+    allSlides.eq(0).removeClass("active");
+    activeSlide = allSlides.length-1;
+    allSlides.eq(activeSlide).addClass("active");
+  }
+  else {
+    allSlides.eq(activeSlide).removeClass("active");
+    activeSlide--;
+    allSlides.eq(activeSlide).addClass("active");
+  }
+});
