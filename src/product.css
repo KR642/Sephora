@@ -48,8 +48,7 @@ height: 36rem !important;
 .swiper-slide img {
     width: 25rem;
     height: 25rem;
-border-radius: 2rem;
-object-fit: cover;
+    object-fit: cover;
 }
 
 .swiper-slide-shadow-left,
@@ -59,7 +58,8 @@ display: none;
 
 .slider-controler {
 position: relative;
-bottom: 2rem;
+bottom: 0;
+padding: 25px;
 display: flex;
 align-items: center;
 justify-content: center;
